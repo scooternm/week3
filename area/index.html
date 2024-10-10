@@ -1,5 +1,5 @@
 <head>
-<script src="/area.js"></script>
+<script src="./area.js"></script>
 </head>
 <body>
     <h1>Area Inputs</h1>
@@ -12,7 +12,7 @@
      </label>
      <button id="calculate">Calculate</button>
      <p>
-        Result: <span id="output"></span>
+        Result: <span id="output">?</span>
      </p>
 </body>
 <script>
@@ -21,7 +21,10 @@
     const widthElement = document.getElementById("widthTag");
     
     function onClick(){
-        output.innerText = area(Number(roomwidth.value), Number(roomheight.value))
+        const w = Number(widthElement.value);
+        const h = Number(heightElement.value);
+        const result = area(w, h);
+        output.innerText = `width ${w} x height ${h} = ${result}`
     }
     calculate.addEventListener("click", onClick);
 </script>
