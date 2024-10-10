@@ -1,0 +1,28 @@
+<body>
+  <div id="heroElement" style="left:0; position: absolute">H</div>  
+  <div id="treasureElement" style="left:100px; position:absolute ">T</div>
+</body>
+<script>
+    // objective
+    // mission
+    // hero
+    // treasure
+    // obstacle
+    // stupid rules 
+    // action 
+    // results
+    let heroPostion = 0
+    let treasurePosition = 100
+    const leapSteps = 20;
+    function moveHero(){
+        heroPostion += 10;
+        if(heroPostion == treasurePosition){
+            alert("YAY!!!")  
+    }
+    updateDisplay();
+}
+function updateDisplay(){
+    heroElement.style.left = `${heroPostion} + px`;
+}
+updateDisplay();
+</script>
